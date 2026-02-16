@@ -1,0 +1,184 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: white;
+  background-color: rgb(1, 57, 81);
+}
+
+#app {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.picker-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 0.5em 2em;
+  gap: 1em;
+}
+
+.card,
+.rune-picker {
+  height: 250px;
+  width: 180px;
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 10px;
+}
+
+.rune-picker {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.draft-amount {
+  background: rgb(1, 57, 81);
+
+  text-align: center;
+  font-size: 2rem;
+
+  margin: 0;
+  padding: 0.25em 1em;
+
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+.deck {
+  width: 100%;
+  position: relative;
+}
+
+.card {
+  cursor: pointer;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  transform: rotate(0deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.ready {
+  left: 200px;
+}
+
+.exhausted {
+  left: 450px;
+  transform: rotate(-85deg);
+}
+
+.face-down {
+  background-color: white;
+}
+
+.p-cardback {
+  color: rgb(1, 57, 81);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 1em;
+}
+
+.btn-primary,
+.btn-secondary {
+  font-size: 1.125rem;
+  padding: 0.5em 1em;
+
+  border-radius: 4px;
+
+  transition: all 0.2s linear;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: rgb(1, 57, 81);
+  background-color: white;
+  border: 2px solid rgb(1, 57, 81);
+
+  min-width: 3em;
+}
+
+.btn-primary {
+  color: white;
+  background-color: rgb(239, 125, 0);
+  border: 2px solid white;
+}
+
+.btn-primary:hover {
+  color: rgb(239, 125, 0);
+  background-color: white;
+  border: 2px solid rgb(239, 125, 0);
+}
+
+.fury {
+  background-color: red;
+  background-image: url("/images/fury_rune.avif");
+}
+
+.calm {
+  background-color: green;
+  background-image: url("/images/calm_rune.avif");
+}
+
+.mind {
+  background-color: blue;
+  background-image: url("/images/mind_rune.avif");
+}
+
+.body {
+  background-color: orange;
+  background-image: url("/images/body_rune.avif");
+}
+
+.chaos {
+  background-color: purple;
+  background-image: url("/images/chaos_rune.avif");
+}
+
+.order {
+  background-color: gold;
+  background-image: url("/images/order_rune.avif");
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 590px) {
+  .rune-picker {
+    width: 100%;
+    height: fit-content;
+
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    border-radius: 20px;
+  }
+
+  .draft-amount {
+    margin: 0;
+  }
+}

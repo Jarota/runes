@@ -1,0 +1,9 @@
+[tools]
+erlang = "latest"
+gleam = "latest"
+rebar = "latest"
+
+superhtml = "latest"
+node = "latest"
+"npm:typescript-language-server" = "latest"
+"npm:vscode-langservers-extracted" = "latest"
