@@ -107,20 +107,20 @@ fn draft_rune_container(rune: Rune, n: Int) -> Element(Msg) {
     html.button(
       [
         attribute.class("btn-secondary"),
-        event.on_click(Draft(UserClickedAdd(rune))),
+        event.on_click(Draft(UserClickedRemove(rune))),
       ],
       [
-        html.text("+"),
+        html.text("-"),
       ],
     ),
     html.p([attribute.class("draft-amount")], [html.text(int.to_string(n))]),
     html.button(
       [
         attribute.class("btn-secondary"),
-        event.on_click(Draft(UserClickedRemove(rune))),
+        event.on_click(Draft(UserClickedAdd(rune))),
       ],
       [
-        html.text("-"),
+        html.text("+"),
       ],
     ),
   ])
